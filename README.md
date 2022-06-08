@@ -1,5 +1,5 @@
 # Enumerable
-> Add Description here.
+> This project contains an enumerable which is used inside of a class. Built with Ruby.
 
 ## Getting Started
 
