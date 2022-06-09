@@ -9,9 +9,7 @@ class MyList
   end
 
   def each
-    @list.each do |element|
-      yield(element)
-    end
+    @list.each { |element| yield element }
   end
 
   def to_s
