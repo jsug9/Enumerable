@@ -1,3 +1,5 @@
+require_relative 'my_enumerable'
+
 # Define Class MyList
 class MyList
   def initialize
