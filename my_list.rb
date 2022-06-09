@@ -13,11 +13,16 @@ class MyList
       yield(element)
     end
   end
+
+  def to_s
+    @list.join(', ')
+  end
 end
 
 # Create our list
 list = MyList.new(1, 2, 3, 4)
 # => <MyList: @list=[1, 2, 3, 4]>
+print list
 
 # Test #all?
 print list.all? {|e| e < 5}
