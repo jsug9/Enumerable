@@ -16,9 +16,8 @@ module MyEnumerable
   def filter
     result = []
     each do |element|
-     result << element if yield(element)
+      result << element if yield(element)
     end
     result
   end
-  
 end

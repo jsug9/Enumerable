@@ -9,7 +9,7 @@ class MyList
   end
 
   def each
-    @list.each { |element| yield element }
+    @list.each { |element| yield(element) if block_given? }
   end
 
   def to_s
@@ -23,17 +23,17 @@ list = MyList.new(1, 2, 3, 4)
 print list
 
 # Test #all?
-print list.all? {|e| e < 5}
+print(list.all? { |e| e < 5 })
 # => true
-print list.all? {|e| e > 5}
+print(list.all? { |e| e > 5 })
 # => false
 
 # Test #any?
-print list.any? {|e| e == 2}
+print(list.any? { |e| e == 2 })
 # => true
-print list.any? {|e| e == 5}
+print(list.any? { |e| e == 5 })
 # => false
 
 # Test #filter
-print list.filter {|e| e.even?}
+print(list.filter(&:even?))
 # => [2, 4]
