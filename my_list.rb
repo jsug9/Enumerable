@@ -26,11 +26,11 @@ print list.all? {|e| e > 5}
 # => false
 
 # Test #any?
-list.any? {|e| e == 2}
+print list.any? {|e| e == 2}
 # => true
-list.any? {|e| e == 5}
+print list.any? {|e| e == 5}
 # => false
 
 # Test #filter
-list.filter {|e| e.even?}
+print list.filter {|e| e.even?}
 # => [2, 4]
